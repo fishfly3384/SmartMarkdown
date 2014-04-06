@@ -69,7 +69,7 @@ class PandocRenderCommand(sublime_plugin.TextCommand):
         #os.unlink(tmp_md.name)
 
     def run_pandoc(self, infile, outfile, args):
-        cmd = ['pandoc'] + args
+        cmd = ['/usr/local/bin/pandoc'] + args
         cmd += [infile, "-o", outfile]
 
         # Merge the path in settings

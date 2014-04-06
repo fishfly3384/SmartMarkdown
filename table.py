@@ -19,7 +19,7 @@ try:
 except ValueError:
     import utilities
 
-TABLE_PATTERN = re.compile(r"\s*\|")
+TABLE_PATTERN = re.compile(r"\s*\|\|")
 SEPARATOR_PATTERN = re.compile(r"\s*(\+[=-])")
 
 
@@ -93,7 +93,7 @@ def _convert_row_text_as_list(row_text):
         The converted list.
 
     """
-    split_row = row_text.split("|")
+    split_row = row_text.split("||")
 
     if len(split_row) > 2 and split_row[-1].strip() == "":
         lst = split_row[1:-1]
@@ -150,9 +150,9 @@ def convert_table_list_to_str(table):
             for col_str in row:
                 row_str += col_str + "+"
         else:
-            row_str = "|"
+            row_str = "||"
             for col_str in row:
-                row_str += " " + col_str + " " + "|"
+                row_str += " " + col_str + " " + "||"
         table_str += row_str + "\n"
     return table_str[:-1]
 
@@ -187,7 +187,7 @@ def get_point_row_and_col(view, from_point):
     region = sublime.Region(line_start_point.a, from_point)
     precedding_text = view.substr(region)
 
-    split_row = precedding_text.split("|")
+    split_row = precedding_text.split("||")
     if len(split_row) >= 2:
         col_num = len(split_row) - 2
     elif split_row[0].strip() == "":
