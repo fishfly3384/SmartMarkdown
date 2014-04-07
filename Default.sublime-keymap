@@ -25,7 +25,7 @@
 	  "args": {"forward": true}, "context":
 		[
 			{ "key": "selector", "operator": "equal", "operand": "text.html.markdown" },
-			{ "key": "preceding_text", "operator": "regex_contains", "operand": "^\\s*(\\|\\||\\+[-=])",
+			{ "key": "preceding_text", "operator": "regex_contains", "operand": "^\\s*(\\||\\+[-=])",
 			  "match_all": true}
 		]
 	},
@@ -34,7 +34,7 @@
 		[
 			{ "key": "selector", "operator": "equal", "operand": "text.html.markdown" },
 			{ "key": "preceding_text", "operator": "regex_contains", "operand": "^\\s*" },
-			{ "key": "following_text", "operator": "regex_contains", "operand": "\\s*(\\|\\||\\+[-=])",
+			{ "key": "following_text", "operator": "regex_contains", "operand": "\\s*(\\||\\+[-=])",
 			  "match_all": true}
 		]
 	},
@@ -42,7 +42,7 @@
 	  "args": {"forward": false}, "context":
 		[
 			{ "key": "selector", "operator": "equal", "operand": "text.html.markdown" },
-			{ "key": "preceding_text", "operator": "regex_contains", "operand": "^\\s*(\\|\\||\\+[-=])",
+			{ "key": "preceding_text", "operator": "regex_contains", "operand": "^\\s*(\\||\\+[-=])",
 			  "match_all": true}
 		]
 	},
@@ -51,7 +51,7 @@
 		[
 			{ "key": "selector", "operator": "equal", "operand": "text.html.markdown" },
 			{ "key": "preceding_text", "operator": "regex_contains", "operand": "^\\s*" },
-			{ "key": "following_text", "operator": "regex_contains", "operand": "\\s*(\\|\\||\\+[-=])",
+			{ "key": "following_text", "operator": "regex_contains", "operand": "\\s*(\\||\\+[-=])",
 			  "match_all": true}
 		]
 	},
